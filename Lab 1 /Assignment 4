@@ -1,0 +1,10 @@
+a,b = input("Enter the value of a and b: ").split()
+
+a= int(a)
+b= int(b)
+
+c= a+b
+a= c-a
+b= c-a
+
+print("a and b are: ",a,b)
