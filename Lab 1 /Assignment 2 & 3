@@ -1,0 +1,14 @@
+a= input("Enter the value of N: ")
+
+N= int(a)
+
+fact=i=1
+
+
+while (i<=N):
+    
+    fact*=i
+    i+=1
+    
+print("The Factorial of N is", fact)
+    
