@@ -1,0 +1,30 @@
+def find_coin_position(test_cases):
+    results = []
+    for case in test_cases:
+        n, x, s = case['n'], case['x'], case['swaps']
+        current_position = x
+        for swap in case['swaps']:
+            a, b = swap
+            if current_position == a:
+                current_position = b
+            elif current_position == b:
+                current_position = a
+        results.append(current_position)
+    return results
+
+t = int(input("Enter the number of test cases: "))
+test_cases = []
+
+for _ in range(t):
+    n, x, s = map(int, input("Enter N, X, and S: ").split())
+    swaps = []
+    for __ in range(s):
+        a, b = map(int, input("Enter swap (A B): ").split())
+        swaps.append((a, b))
+    test_cases.append({'n': n, 'x': x, 'swaps': swaps})
+
+results = find_coin_position(test_cases)
+
+print("Output:")
+for result in results:
+    print(result)
