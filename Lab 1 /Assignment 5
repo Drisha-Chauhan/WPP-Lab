@@ -1,0 +1,11 @@
+N= int(input("Enter the value of N: "))
+
+i=1
+print("The table of",N,"is")
+
+while(i<N):
+    
+    print(i*N)
+    i+=1
+    
+    
