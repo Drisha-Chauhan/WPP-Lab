@@ -1,0 +1,23 @@
+def kal():
+ import pandas as pd
+
+ date_str = input("Enter a date (e.g., '2012-01-15'): ")
+ time_str = input("Enter a time (e.g., '21:20:00'): ")
+
+ dt1 = pd.Timestamp(date_str)
+ dt2 = pd.Timestamp(f'{date_str} {time_str}')
+
+ local_dt = pd.Timestamp.now()
+ date_only = pd.Timestamp(date_str).date()
+ current_date = pd.to_datetime('today').date()
+
+ time_from_dt = pd.Timestamp(f'{date_str} {time_str}').time()
+ current_local_time = pd.Timestamp.now().time
+
+ print("Date time object:", dt1)
+ print("Specific date and time:", dt2)
+ print("Local date and time:", local_dt)
+ print("Date without time:", date_only)
+ print("Current date:", current_date)
+ print("Time from datetime:", time_from_dt)
+ print("Current local time:", current_local_time)
