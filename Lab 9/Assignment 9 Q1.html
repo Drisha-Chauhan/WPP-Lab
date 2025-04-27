@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('Images/Zomato search bar image .png') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .nav button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+        .get-app {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .get-app button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 70px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .search-bar {
+            margin-top: 20px;
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        .card p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="get-app">
+            <button>Get the App</button>
+        </div>
+        <div class="nav">
+            <button>Login</button>
+            <button>Sign Up</button>
+        </div>
+        <h1>zomato</h1>
+        <p>Discover the best food & drinks in Chennai</p>
+        <input type="text" class="search-bar" placeholder="Search for restaurants, cuisine or a dish...">
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="Images/Zomato Image 1.png " alt="Food">
+            <p>Order Food Online</p>
+        </div>
+        <div class="card">
+            <img src="Images/Zomato Image 2.png" alt="Dining">
+            <p>Go out for a meal</p>
+        </div>
+        <div class="card">
+            <img src="Images/Zomato Image 3.png" alt="Night Life">
+            <p>Night Life & Clubs</p>
+        </div>
+        <div class="card">
+            <img src="Images/Zomato Image 4.png" alt="Zomato Pro">
+            <p>Zomato Pro</p>
+        </div>
+    </div>
+</body>
+</html>

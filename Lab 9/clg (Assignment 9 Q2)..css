@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(75, 12, 12);
+    padding: 15px 50px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+/* Banner Section */
+.banner {
+    background: url('Images/college image.jpg ') no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+}
+
+/* Links Section */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+}
+
+.box {
+    background: rgb(75, 12, 12);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.box a {
+    color: white;
+    text-decoration: none;
+}
+
+.box:hover {
+    background: darkblue;
+    transform: scale(1.05);
+}
