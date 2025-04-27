@@ -1,0 +1,39 @@
+def party():
+ import pandas as pd
+ 
+print("Enter 10 values for Rahul (True/False):")
+ rahul = [val.strip().lower() == 'true' for val in input().split(',')]
+ 
+print("Enter 10 values for Juhi (True/False):")
+ juhi = [val.strip().lower() == 'true' for val in input().split(',')]
+ 
+df = pd.DataFrame({'Rahul': rahul, 'Juhi': juhi})
+ party_days = (df['Rahul'] & df['Juhi'])
+ 
+days_til_party = pd.Series(index=df.index, dtype=int)
+
+ next_party = None
+ for i in reversed(df.index):
+ 
+if party_days[i]:
+ next_party = i
+ days_til_party[i] = 0
+ 
+elif next_party is not None:
+ days_til_party[i] = next_party - i
+
+else:
+ next_party = None
+ for i in reversed(df.index):
+ 
+if party_days[i]:
+ next_party = i
+ days_til_party[i] = 0
+ 
+elif next_party is not None:
+ days_til_party[i] = next_party - i
+ 
+else:
+days_til_party[i] = None
+ df['days_til_party'] = days_til_party
+ return df
