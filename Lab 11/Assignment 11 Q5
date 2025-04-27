@@ -1,0 +1,23 @@
+def concert():
+ import pandas as pd
+ from itertools import product
+ print("Enter artist names (comma-separated):")
+ artists_input = input().split(',')
+ print("Enter venue names (comma-separated):")
+ venues_input = input().split(',')
+ data = pd.DataFrame({
+ 'artist': ['Arjun', 'Arjun', 'Bina', 'Bina', 'Chitra', 'Arjun', 'Bina', 'Chitra', 'Arjun', 'Bina'],
+ 'venue': ['Delhi', 'Mumbai', 'Delhi', 'Mumbai', 'Delhi', 'Delhi', 'Mumbai', 'Mumbai', 'Mumbai',
+'Delhi'],
+ 'date': pd.date_range('2023-01-01', periods=10, freq='M')
+ })
+ data['year_month'] = data['date'].dt.to_period('M')
+ count = data.groupby(['year_month', 'artist', 'venue']).size().reset_index(name='count')
+ full_index = pd.MultiIndex.from_product(
+ [data['year_month'].unique(), artists_input, venues_input],
+ names=['year_month', 'artist', 'venue']
+ )
+ count = count.set_index(['year_month', 'artist', 'venue']).reindex(full_index,
+fill_value=0).reset_index()
+ wide = count.pivot(index='year_month', columns=['artist', 'venue'], values='count').fillna(0)
+ return wide
