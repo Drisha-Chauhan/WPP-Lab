@@ -1,0 +1,8 @@
+def deal():
+ import pandas as pd
+ asking = list(map(int, input("Enter asking prices (comma-separated): ").split(',')))
+ fair = list(map(int, input("Enter fair prices (comma-separated): ").split(',')))
+ asking_prices = pd.Series(asking)
+ fair_prices = pd.Series(fair)
+ good_deals = list(asking_prices[asking_prices < fair_prices].index)
+ return good_deals
