@@ -1,0 +1,7 @@
+def words():
+ import pandas as pd
+ s = pd.Series(input("Enter comma-separated words: ").split(','))
+ upper = s.str.upper()
+ lower = s.str.lower()
+ length = s.str.len()
+ return upper, lower, length
